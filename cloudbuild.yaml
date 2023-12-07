@@ -1,0 +1,19 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '-t'
+    - 'us-central1-docker.pkg.dev/tranquil-racer-401805/myrepo/myimagedemo:latest'
+    - '.'
+
+# Step 2: Push the Docker image to Google Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'push'
+    - 'us-central1-docker.pkg.dev/tranquil-racer-401805/myrepo/myimagedemo:latest'
+
+images:
+- 'us-central1-docker.pkg.dev/tranquil-racer-401805/myrepo/myimagedemo:latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

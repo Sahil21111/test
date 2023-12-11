@@ -9,7 +9,7 @@ steps:
     - 'instance-1'  # Replace with your actual instance name
     - '--zone=us-central1-a'  # Replace with your actual zone
     - '--project=cloud-run-407409'
-    - '--command=/home/sahilhr24/myrepo/update-script.sh'  # Updated to execute the script directly
+    - '--command=/home/sahilhr24/myrepo/updated-scritp.sh'  # Updated to execute the script directly
 
 options:
   logging: CLOUD_LOGGING_ONLY   # Set the logging option
